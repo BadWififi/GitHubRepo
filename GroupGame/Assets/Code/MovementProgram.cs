@@ -22,10 +22,9 @@ public class MovementProgram : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
     }
-    void Update()
+    private void Update()
     {
-        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        Movement();
+        horizontal = Input.GetAxisRaw("horizontal");
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -39,13 +38,9 @@ public class MovementProgram : MonoBehaviour
 
         Flip();
     }
-    private void Movement()
+    private void FixedUpdate()
     {
-/*        if (Input.GetKeyDown())
-        {
-
-        }
-        rb.velocity = movementDirection * speed;*/
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
     private bool IsGrounded()
