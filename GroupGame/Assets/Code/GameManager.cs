@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject AbilityShop;
     public GameObject UpgradeShop;
     public int Bread = 31;
+    public Weapon test;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,16 +49,16 @@ public class GameManager : MonoBehaviour
         UpgradeShop.SetActive(true);
     }
 
-    public void BuySoul()
+    public void BuySoul(Weapon weapon)
     {
-        if (Bread - 10 < 0)
+        if (Bread - weapon.pricing < 0)
         {
             Debug.Log("in debt dumbass");
             
         }
         else
         {
-            Bread -= 10;
+            Bread -= weapon.pricing;
             MoneyText.text = $"AUD {Bread}";
         }
     }

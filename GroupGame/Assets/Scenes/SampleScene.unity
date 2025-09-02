@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 32385576}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028570166}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BuySoul
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 6f0c94f1390cfb44991551fc3e3fd327, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &32385576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,10 +677,10 @@ MonoBehaviour:
       - m_Target: {fileID: 2028570166}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: BuySoul
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 3532568b556fbc0439fa7621a8eecbee, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -794,7 +806,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 452510000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028570166}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BuySoul
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: afc4d0c4516642348af4c23a869f66be, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &452510000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3461,7 +3485,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1410616762}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2028570166}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BuySoul
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 56736f203999e3346ba66f0f9e8f0f45, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1410616762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4721,7 +4757,8 @@ MonoBehaviour:
   WeaponsShop: {fileID: 1742817595}
   AbilityShop: {fileID: 2003113615}
   UpgradeShop: {fileID: 1160591389}
-  Bread: 31
+  Bread: 100
+  test: {fileID: 0}
 --- !u!1 &2048749928
 GameObject:
   m_ObjectHideFlags: 0
