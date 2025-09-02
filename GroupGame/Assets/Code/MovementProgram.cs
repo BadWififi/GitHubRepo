@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovementProgram : MonoBehaviour
@@ -8,15 +9,23 @@ public class MovementProgram : MonoBehaviour
     public float speed = 8f;
     public float jumpingPower = 16f;
     public bool isFacingRight = true;
+    Vector2 movement = Vector2.zero;
+    public Vector2 movementDirection;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
     // Update is called once per frame
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+    }
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Movement();
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -30,15 +39,21 @@ public class MovementProgram : MonoBehaviour
 
         Flip();
     }
-    private void FixedUpdate()
+    private void Movement()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if (Input.GetKeyDown())
+        {
+
+        }
+        rb.velocity = movementDirection * speed;
     }
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+
+
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
