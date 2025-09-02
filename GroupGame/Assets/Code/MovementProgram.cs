@@ -41,11 +41,11 @@ public class MovementProgram : MonoBehaviour
     }
     private void Movement()
     {
-        //if (Input.GetKeyDown())
-        //{
+        if (Input.GetKeyDown())
+        {
 
-        //}
-        //rb.velocity = movementDirection * speed;
+        }
+        rb.velocity = movementDirection * speed;
     }
 
     private bool IsGrounded()
