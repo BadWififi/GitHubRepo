@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject AbilityShop;
     public GameObject UpgradeShop;
     public int Bread = 31;
-    public Weapon test;
+    
     // Start is called before the first frame update
     void Start()
     {
-        MoneyText.text = $"AUD {Bread}";
+        MoneyText.text = $"GEO {Bread}";
     }
 
     // Update is called once per frame
@@ -59,8 +59,34 @@ public class GameManager : MonoBehaviour
         else
         {
             Bread -= weapon.pricing;
-            MoneyText.text = $"AUD {Bread}";
+            MoneyText.text = $"GEO {Bread}";
         }
     }
 
+    public void BuySpecialPower(Abilitys ability)
+    {
+        if (Bread - ability.pricing < 0)
+        {
+            Debug.Log("in debt dumbass");
+
+        }
+        else
+        {
+            Bread -= ability.pricing;
+            MoneyText.text = $"GEO {Bread}";
+        }
+    }
+    public void BuyPowerLevel(Upgrades upgrades)
+    {
+        if (Bread - upgrades.pricing < 0)
+        {
+            Debug.Log("in debt dumbass");
+
+        }
+        else
+        {
+            Bread -= upgrades.pricing;
+            MoneyText.text = $"GEO {Bread}";
+        }
+    }
 }
