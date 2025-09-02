@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7750111}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1670485032}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BuySoul
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: afc4d0c4516642348af4c23a869f66be, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7750111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,7 +3336,7 @@ GameObject:
   - component: {fileID: 1391141073}
   - component: {fileID: 1391141072}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: 'Main Camera '
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4222,7 +4234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1662531706}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1670485032}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: BuySoul
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 6f0c94f1390cfb44991551fc3e3fd327, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Weapon, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1662531706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4297,7 +4321,8 @@ MonoBehaviour:
   WeaponsShop: {fileID: 1677038894}
   AbilityShop: {fileID: 1227174352}
   UpgradeShop: {fileID: 1879617646}
-  Bread: 31
+  Bread: 150
+  test: {fileID: 0}
 --- !u!114 &1670485033
 MonoBehaviour:
   m_ObjectHideFlags: 0
