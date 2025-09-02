@@ -1742,7 +1742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &667791494
 Rigidbody2D:
   serializedVersion: 4
@@ -1779,7 +1779,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 667791493}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d5a8ef3bacd9964b87cf4663a98f4ca, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1835,7 +1835,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b52bb235fb0cd134bab765dcdc3cd4f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4630,7 +4630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2028570162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4735,6 +4735,7 @@ MonoBehaviour:
   AbilityShop: {fileID: 2003113615}
   UpgradeShop: {fileID: 1160591389}
   Bread: 31
+  test: {fileID: 0}
 --- !u!1 &2048749928
 GameObject:
   m_ObjectHideFlags: 0
