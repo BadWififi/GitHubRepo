@@ -1897,7 +1897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   speed: 8
-  jumpingPower: 8
+  jumpingPower: 10
   isFacingRight: 1
   movementDirection: {x: 0, y: 0}
   rb: {fileID: 667791494}

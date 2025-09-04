@@ -24,7 +24,7 @@ public class MovementProgram : MonoBehaviour
     }
     private void Update()
     {
-        horizontal = Input.GetAxisRaw("horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -59,4 +59,5 @@ public class MovementProgram : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
 }
