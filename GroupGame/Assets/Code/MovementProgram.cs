@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovementProgram : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MovementProgram : MonoBehaviour
     public bool isFacingRight = true;
     Vector2 movement = Vector2.zero;
     public Vector2 movementDirection;
+    public bool OnCheckpoint;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -58,6 +60,18 @@ public class MovementProgram : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+    public void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        if (collision.gameObject.tag == "Checkpoint")
+        {
+            Debug.Log("Continue to next level");
+            BeginGame();
+        }
+    }
+    public void BeginGame()
+    {
+        SceneManager.LoadScene("GameLevel");
     }
 
 }
