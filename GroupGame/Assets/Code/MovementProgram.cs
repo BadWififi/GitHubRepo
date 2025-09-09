@@ -17,7 +17,7 @@ public class MovementProgram : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask Oncheckpoint;
+    [SerializeField] private LayerMask Checkpoint;
 
     // Update is called once per frame
     private void Start()
