@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 using UnityEngine.SceneManagement;
 
 public class MovementProgram : MonoBehaviour
@@ -12,11 +13,11 @@ public class MovementProgram : MonoBehaviour
     public bool isFacingRight = true;
     Vector2 movement = Vector2.zero;
     public Vector2 movementDirection;
-    public bool OnCheckpoint;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask Oncheckpoint;
 
     // Update is called once per frame
     private void Start()
@@ -37,8 +38,7 @@ public class MovementProgram : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-
-        Flip();
+            Flip();
     }
     private void FixedUpdate()
     {
@@ -61,14 +61,14 @@ public class MovementProgram : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    public void OnCollisionEnter(UnityEngine.Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Checkpoint")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Checkpoint"))
         {
-            Debug.Log("Continue to next level");
-            BeginGame();
+            Debug.Log("On Checkpoint");
         }
     }
+
     public void BeginGame()
     {
         SceneManager.LoadScene("GameLevel");
