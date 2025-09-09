@@ -8,7 +8,7 @@ public class MovementProgram : MonoBehaviour
 {
     public float horizontal;
     public float speed = 8f;
-    public float jumpingPower = 16f;
+    public float jumpingPower = 0f;
     public bool isFacingRight = true;
     Vector2 movement = Vector2.zero;
     public Vector2 movementDirection;

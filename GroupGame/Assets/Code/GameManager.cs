@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class GameManager : MonoBehaviour
     public GameObject AbilityShop;
     public GameObject UpgradeShop;
     public int Bread = 31;
+    public GameObject Shopifi;
+    public float slidertime = 0;
+    public Slider timer;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OpenShop();
+            StartCoroutine(ShopClosedTimer()); 
+            
+            StartCoroutine(ShopTimerSlider());
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            StopAllCoroutines();
+            timer.value = 0;
+            slidertime = 0;
+        }
     }
 
 
@@ -88,5 +106,39 @@ public class GameManager : MonoBehaviour
             Bread -= upgrades.pricing;
             MoneyText.text = $"GEO {Bread}";
         }
+    }
+
+    public void OpenShop()
+    {
+        Shopifi.SetActive(true);
+
+    }
+
+    public void ClosedShop()
+    {
+        WeaponsShop.SetActive(false);
+        AbilityShop.SetActive(false);
+        UpgradeShop.SetActive(false);
+        Shopifi.SetActive(false);
+    }
+
+    IEnumerator ShopClosedTimer()
+    {
+        yield return new WaitForSeconds(4);
+        ClosedShop();
+
+    }
+
+    IEnumerator ShopTimerSlider()
+    {
+
+        while (slidertime < 4)
+        {
+            Debug.Log(Time.deltaTime);
+            slidertime += Time.deltaTime;
+            timer.value = slidertime;
+            yield return null;
+        }
+        
     }
 }
