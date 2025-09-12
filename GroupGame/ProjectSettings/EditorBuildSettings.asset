@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/GameLevel.unity
+    guid: 5feac8fbf8145fd41be14469033677b4
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 6ffbadad44cfb794d84757ebf087d073
+  - enabled: 1
+    path: Assets/Scenes/SecretArea.unity
+    guid: 86fbe7820d142884892c09f84bdb3fc9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 42ec0a0a0f112c145818a0387cabfdcf, type: 3}

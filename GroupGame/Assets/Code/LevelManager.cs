@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             Debug.Log("Player is on the checkpoint");
+            SceneManager.LoadScene("GameLevel");
+
         }
     }
 }

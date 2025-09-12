@@ -28,17 +28,23 @@ public class MovementProgram : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (SceneManager.GetActiveScene().name == "SecretArea")
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            StartCoroutine(ChangeAfter4SecondsCoroutine());
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-            Flip();
+
+        //if (Input.GetButtonDown("Jump") && IsGrounded())
+        //{
+        //    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        //}
+
+        //if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        //{
+        //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        //}
+        Flip();
+
     }
     private void FixedUpdate()
     {
@@ -71,6 +77,12 @@ public class MovementProgram : MonoBehaviour
 
     public void BeginGame()
     {
+        SceneManager.LoadScene("GameLevel");
+    }
+
+    IEnumerator ChangeAfter4SecondsCoroutine()
+    {
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("GameLevel");
     }
 
