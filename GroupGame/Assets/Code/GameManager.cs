@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         MoneyText.text = $"GEO {Bread}";
+        WeaponsShop.SetActive(false);
+        Shopifi.SetActive(false);
     }
 
     // Update is called once per frame
