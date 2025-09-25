@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
 
-        if (distance < 4)
+        if (distance < 10)
         {
             transform.position = Vector2.MoveTowards(
                 transform.position,
