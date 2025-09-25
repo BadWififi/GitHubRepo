@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    private EnemySpawner enemySpawning;
     public int maxHealth = 100;
     int currentHealth;
 
@@ -27,8 +28,14 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy Died");
 
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        Destroy(gameObject);
+
+        enemySpawning = FindObjectOfType<EnemySpawner>();
+        enemySpawning.enemiesInRoom--;
+        if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
+        {
+            enemySpawning.spawnerDone = true;
+        }
     }
 
 }
