@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints: []
   enemies: []
-  minTimeBetweenSpawns: 1
+  minTimeBetweenSpawns: 3
   maxTimeBetweenSpawns: 5
   canSpawn: 1
   spawnTime: 15
