@@ -7155,18 +7155,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
       propertyPath: m_Size.x
-      value: 0.984375
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
       propertyPath: m_Size.y
-      value: 0.984375
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
       propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
       propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+      propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4189345216336790081, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
