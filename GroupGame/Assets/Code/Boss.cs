@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Boss : MonoBehaviour
 {
-    private EnemySpawner enemySpawning;
+    private BossSpawner bossSpawning;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -27,16 +27,17 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy Died");
+        Debug.Log("Boss Died");
 
         Destroy(gameObject);
 
-        enemySpawning = FindObjectOfType<EnemySpawner>();
-        enemySpawning.enemiesInRoom--;
+        bossSpawning = FindObjectOfType<BossSpawner>();
+        bossSpawning.enemiesInRoom--;
 
-        if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
+        if (bossSpawning.spawnTime <= 0 && bossSpawning.enemiesInRoom <= 0)
         {
-            enemySpawning.spawnerDone = true;
+            bossSpawning.spawnerDone = true;
         }
     }
 }
+

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class BossSpawner : MonoBehaviour
 {
     public GameObject[] spawnPoints;
     GameObject currentPoint;
@@ -44,11 +44,10 @@ public class EnemySpawner : MonoBehaviour
             enemiesInRoom++;
         }
 
-        Invoke("SpawnEnemy", timeBetweenSpawns);
+        Invoke("SpawnBoss", timeBetweenSpawns);
         if (spawnerDone)
         {
             //DoneSpawning
         }
     }
 }
-
