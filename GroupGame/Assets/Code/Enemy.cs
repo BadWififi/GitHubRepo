@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth = 100;
     int currentHealth;
-
+    public int numOfEnemyKilled = 0;
     void Start()
     {
         currentHealth = maxHealth;
@@ -28,15 +28,17 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy Died");
+        GameObject.Find("Enemy").SetActive(false);
+        numOfEnemyKilled++;
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
 
-        enemySpawning = FindObjectOfType<EnemySpawner>();
-        enemySpawning.enemiesInRoom--;
+        //enemySpawning = FindObjectOfType<EnemySpawner>();
+        //enemySpawning.enemiesInRoom--;
 
-        if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
-        {
-            enemySpawning.spawnerDone = true;
-        }
+        //if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
+        //{
+        //    enemySpawning.spawnerDone = true;
+        //}
     }
 }

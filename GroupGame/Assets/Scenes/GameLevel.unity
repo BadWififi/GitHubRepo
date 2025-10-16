@@ -4582,7 +4582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1352954645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7997,7 +7997,7 @@ PrefabInstance:
       objectReference: {fileID: 667791493}
     - target: {fileID: 6693889234845159419, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
       propertyPath: enemySpeed
-      value: 0.02
+      value: 0.002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
