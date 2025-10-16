@@ -29,8 +29,6 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy Died");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         Destroy(gameObject);
 
         enemySpawning = FindObjectOfType<EnemySpawner>();
@@ -40,37 +38,5 @@ public class Enemy : MonoBehaviour
         {
             enemySpawning.spawnerDone = true;
         }
-=======
-        //Destroy(gameObject);
-        // Destroying game object throws an error, trialing disabling instead
-        GameObject.Find("Enemy").SetActive(false);
-        // Code below throws error "NullReferenceException: Object reference not set to an instance of an object" so i commented it out to make the game work
-        
-        //enemySpawning = FindObjectOfType<EnemySpawner>();
-        //enemySpawning.enemiesInRoom--;
-        //if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
-        //{
-        //    enemySpawning.spawnerDone = true;
-        //}
->>>>>>> 390f9cc7a2c84987ed5224d7de15f0353e5c8b73
     }
-=======
-        //Destroy(gameObject);
-        // Destroying game object throws an error, trialing disabling instead
-        GameObject.Find("Enemy").SetActive(false);
-        // Code below throws error "NullReferenceException: Object reference not set to an instance of an object" so i commented it out to make the game work
-        
-        //enemySpawning = FindObjectOfType<EnemySpawner>();
-        //enemySpawning.enemiesInRoom--;
-        //if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
-        //{
-        //    enemySpawning.spawnerDone = true;
-        //}
-    }
-
-
-<<<<<<< HEAD
->>>>>>> 390f9cc7a2c84987ed5224d7de15f0353e5c8b73
-=======
->>>>>>> 390f9cc7a2c84987ed5224d7de15f0353e5c8b73
 }
