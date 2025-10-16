@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelSystem : MonoBehaviour
+public class Checkpoint : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
