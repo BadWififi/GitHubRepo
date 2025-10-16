@@ -43,8 +43,16 @@ public class MovementProgram : MonoBehaviour
         //{
         //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         //}
+        GameObject ShopUI = GameObject.FindWithTag("Shop");
+        if (ShopUI != null)
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 8;
+        }
         Flip();
-
     }
     private void FixedUpdate()
     {

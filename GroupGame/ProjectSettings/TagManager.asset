@@ -7,6 +7,7 @@ TagManager:
   - Level Objects
   - Checkpoint
   - SecretCheckpoint
+  - Shop
   layers:
   - Default
   - TransparentFX
