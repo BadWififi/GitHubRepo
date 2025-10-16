@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public GameObject player;
-    public float enemySpeed = 0.0002f;
+    public float enemySpeed = 0.002f;
     public int damage = 20; // how much damage the enemy deals
 
     private float distance;
