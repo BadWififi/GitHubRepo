@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShopClosedTimer()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         ClosedShop();
 
     }
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ShopTimerSlider()
     {
 
-        while (slidertime < 4)
+        while (slidertime < 2)
         {
             Debug.Log(Time.deltaTime);
             slidertime += Time.deltaTime;
