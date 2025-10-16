@@ -4,50 +4,68 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] spawnPoints;
-    GameObject currentPoint;
-    int index;
+    public GameObject[] spawnPoints;         
+    public GameObject[] enemies;             
+    public float minTimeBetweenSpawns = 1f;  
+    public float maxTimeBetweenSpawns = 3f;  
 
-    public GameObject[] enemies;
-    public float minTimeBetweenSpawns;
-    public float maxTimeBetweenSpawns;
-    public bool canSpawn;
-    public float spawnTime;
-    public int enemiesInRoom;
-    public bool spawnerDone;
+    public int enemiesInRoom = 0;            
+    public bool spawnerDone = false;        
+
     private void Start()
     {
-        Invoke("SpawnEnemy", 0.5f);
+        StartCoroutine(SpawnEnemyCoroutine());  
     }
 
-    private void Update()
+    IEnumerator SpawnEnemyCoroutine()
     {
-        if (canSpawn)
-        { 
-            spawnTime -= Time.deltaTime;
-            if (spawnTime < 0)
+        while (!spawnerDone)
+        {
+            if (spawnPoints.Length == 0 || enemies.Length == 0)
             {
-                canSpawn = false;
+                Debug.LogWarning("No spawn points or enemies configured.");
+                yield break;
             }
+
+            List<GameObject> validEnemies = new List<GameObject>();
+            foreach (GameObject enemy in enemies)
+            {
+                if (enemy != null)
+                    validEnemies.Add(enemy);
+            }
+
+            if (validEnemies.Count == 0)
+            {
+                Debug.LogError("All enemy prefabs are null or have been destroyed.");
+                yield break;
+            }
+
+            int spawnIndex = Random.Range(0, spawnPoints.Length);
+            int enemyIndex = Random.Range(0, validEnemies.Count);
+
+            GameObject spawnPoint = spawnPoints[spawnIndex];
+            GameObject enemyPrefab = validEnemies[enemyIndex];
+
+            Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
+            enemiesInRoom++;
+
+            float timeBetweenSpawns = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+            yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }
 
-    void SpawnEnemy()
+    public void StopSpawning()
     {
-        index = Random.Range(0, spawnPoints.Length);
-        currentPoint = spawnPoints[index];
-        float timeBetweenSpawns = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+        spawnerDone = true;
+    }
 
-        if (canSpawn)
-        {
-            Instantiate(enemies[Random.Range(0, enemies.Length)], currentPoint.transform.position,Quaternion.identity);
-            enemiesInRoom++;
-        }
+    public void ResumeSpawning()
+    {
+        if (!spawnerDone)
+            return;
 
-        Invoke("SpawnEnemy", timeBetweenSpawns);
-        if(spawnerDone)
-        {
-            //DoneSpawning
-        }
+        spawnerDone = false;
+        StartCoroutine(SpawnEnemyCoroutine()); 
     }
 }
+

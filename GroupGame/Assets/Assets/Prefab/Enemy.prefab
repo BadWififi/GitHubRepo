@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6693889234845159419}
   - component: {fileID: 3434419046324251816}
   - component: {fileID: 6244851645952460869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 5
+  speed: 0.005
   damage: 20
 --- !u!50 &3434419046324251816
 Rigidbody2D:

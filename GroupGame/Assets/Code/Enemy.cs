@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     private EnemySpawner enemySpawning;
-    public int maxHealth = 100;
-    int currentHealth;
+    public int maxHealth = 100;          
+    private int currentHealth;          
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = maxHealth;       
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Debug.Log("Enemy Health: " + currentHealth); 
 
         if (currentHealth <= 0)
         {
@@ -28,14 +26,12 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy Died");
 
-        Destroy(gameObject);
-
         enemySpawning = FindObjectOfType<EnemySpawner>();
-        enemySpawning.enemiesInRoom--;
-        if (enemySpawning.spawnTime <= 0 && enemySpawning.enemiesInRoom <= 0)
+        if (enemySpawning != null)
         {
-            enemySpawning.spawnerDone = true;
+            enemySpawning.enemiesInRoom--;  
         }
-    }
 
+        Destroy(gameObject);
+    }
 }
