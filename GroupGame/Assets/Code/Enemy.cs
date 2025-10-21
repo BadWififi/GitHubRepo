@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     public int maxHealth = 100;
     int currentHealth;
-    public int numOfEnemyKilled = 0;
+    public float numOfEnemyKilled = 0f;
     void Start()
     {
         currentHealth = maxHealth;
@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy Died");
         GameObject.Find("Enemy").SetActive(false);
         numOfEnemyKilled++;
+        Debug.Log(numOfEnemyKilled.ToString());
 
         //Destroy(gameObject);
 
