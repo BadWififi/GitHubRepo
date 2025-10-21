@@ -16,13 +16,16 @@ public class LevelSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject Enemy = GameObject.Find("Enemy");
-        Enemy enemyScript = Enemy.GetComponent<Enemy>();
-        DeadEnemies = enemyScript.numOfEnemyKilled;
-        if (DeadEnemies == 1f)
+        if (GameObject.Find("Enemy") != null)
+        {
+            GameObject Enemy = GameObject.Find("Enemy");
+            Enemy enemyScript = Enemy.GetComponent<Enemy>();
+            DeadEnemies = enemyScript.numOfEnemyKilled;
+        }
+        else
         {
             Debug.Log("Continue to next level");
-            //SceneManager.LoadScene("GameLevel2");
+            SceneManager.LoadScene("GameLevel2");
         }
     }
 }

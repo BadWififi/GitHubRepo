@@ -32,7 +32,6 @@ public class Enemy : MonoBehaviour
         numOfEnemyKilled++;
         Debug.Log(numOfEnemyKilled.ToString());
 
-        //Destroy(gameObject);
 
         //enemySpawning = FindObjectOfType<EnemySpawner>();
         //enemySpawning.enemiesInRoom--;

@@ -8131,8 +8131,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2810904203693791263, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5509139548692659675}
   m_SourcePrefab: {fileID: 100100000, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
+--- !u!1 &5509139548692659674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2810904203693791263, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
+  m_PrefabInstance: {fileID: 5509139548692659673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5509139548692659675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509139548692659674}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4daf40c4cad444d89e865704501bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
+  enemies: []
+  minTimeBetweenSpawns: 0
+  maxTimeBetweenSpawns: 0
+  canSpawn: 0
+  spawnTime: 0
+  enemiesInRoom: 0
+  spawnerDone: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
