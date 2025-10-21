@@ -31,8 +31,16 @@ public class GameManager : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            OpenShop();
-            StartCoroutine(ShopClosedTimer()); 
+            if (Shopifi.activeSelf)
+            {
+                StartCoroutine(ShopClosedTimer());
+            }
+            else
+            {
+                StartCoroutine(ShopOpenTimer());
+            }
+          
+           
             
             StartCoroutine(ShopTimerSlider());
         }
@@ -128,6 +136,13 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         ClosedShop();
+
+    }
+
+    IEnumerator ShopOpenTimer()
+    {
+        yield return new WaitForSeconds(2);
+        OpenShop();
 
     }
 
