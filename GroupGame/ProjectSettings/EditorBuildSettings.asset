@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 6ffbadad44cfb794d84757ebf087d073
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameLevel.unity
     guid: 5feac8fbf8145fd41be14469033677b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SecretArea.unity
     guid: 86fbe7820d142884892c09f84bdb3fc9
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameLevel2.unity
     guid: 66d6f046f9fbf7d43b0b8fe85bdab509
   m_configObjects:
