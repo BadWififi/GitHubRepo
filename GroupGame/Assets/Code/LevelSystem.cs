@@ -16,7 +16,7 @@ public class LevelSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Enemy") != null)
+        if (GameObject.Find("Enemy") != null && SceneManager.GetActiveScene().name == "GameLevel1")
         {
             GameObject Enemy = GameObject.Find("Enemy");
             Enemy enemyScript = Enemy.GetComponent<Enemy>();
