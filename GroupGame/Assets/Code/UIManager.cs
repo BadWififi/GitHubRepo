@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI Instructions;
     [SerializeField] TextMeshProUGUI WelcomeText;
     [SerializeField] TextMeshProUGUI SecretArea;
+    [SerializeField] TextMeshProUGUI LevelInfo1;
     public Canvas LevelUI;
 
     public bool GameStarted = false;
