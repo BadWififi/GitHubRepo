@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,7 @@ public class LevelSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (GameObject.Find("Enemy") != null)
         {
             GameObject Enemy = GameObject.Find("Enemy");
@@ -27,5 +29,7 @@ public class LevelSystem : MonoBehaviour
             Debug.Log("Continue to next level");
             SceneManager.LoadScene("GameLevel2");
         }
+
+        
     }
 }
