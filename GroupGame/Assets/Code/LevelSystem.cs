@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,11 +8,14 @@ using UnityEngine.SceneManagement;
 public class LevelSystem : MonoBehaviour
 {
     public float DeadEnemies;
+    [SerializeField] TextMeshProUGUI LevelInfo2;
+    [SerializeField] TextMeshProUGUI LevelInfo1;
     // Start is called before the first frame update
     
     void Start()
     {
-
+        LevelInfo1.enabled = true;
+        LevelInfo2.enabled = false;
     }
 
     // Update is called once per frame
@@ -28,6 +32,8 @@ public class LevelSystem : MonoBehaviour
         {
             Debug.Log("Continue to next level");
             SceneManager.LoadScene("GameLevel2");
+            LevelInfo2.enabled= true;
+            LevelInfo1.enabled= false;
         }
 
         
