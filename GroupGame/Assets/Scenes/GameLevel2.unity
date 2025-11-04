@@ -2575,7 +2575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378.00647, y: 19.42212}
+  m_AnchoredPosition: {x: -875, y: 356}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894927319
@@ -2706,7 +2706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -122, y: 373}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &939330744
@@ -2756,8 +2756,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2792,7 +2792,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 52.091198}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3905,6 +3905,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeadEnemies: 0
+  LevelInfo2: {fileID: 0}
+  LevelInfo1: {fileID: 0}
 --- !u!4 &1206961106
 Transform:
   m_ObjectHideFlags: 0
@@ -3937,7 +3939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1263688525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3959,7 +3961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -439, y: -117}
+  m_AnchoredPosition: {x: -427, y: -95.155}
   m_SizeDelta: {x: 2970.96, y: 924.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263688526
@@ -6032,6 +6034,8 @@ MonoBehaviour:
   Instructions: {fileID: 449709079}
   WelcomeText: {fileID: 1630243849}
   SecretArea: {fileID: 610678021}
+  LevelInfo1: {fileID: 0}
+  LevelInfo2: {fileID: 0}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
 --- !u!114 &1844552148
@@ -6327,8 +6331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 545, y: -7}
-  m_SizeDelta: {x: 160, y: -11.81}
+  m_AnchoredPosition: {x: 621, y: -42}
+  m_SizeDelta: {x: 431.76, y: -50.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922437245
 MonoBehaviour:
@@ -6461,7 +6465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91.993805, y: 19.42212}
+  m_AnchoredPosition: {x: -198, y: 345}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926166620
