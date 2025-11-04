@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI Instructions;
     [SerializeField] TextMeshProUGUI WelcomeText;
     [SerializeField] TextMeshProUGUI SecretArea;
+    [SerializeField] TextMeshProUGUI LevelInfo1;
+    [SerializeField] TextMeshProUGUI LevelInfo2;
     public Canvas LevelUI;
 
     public bool GameStarted = false;
@@ -22,6 +24,8 @@ public class UIManager : MonoBehaviour
         WelcomeText.enabled = true;
         GameStarted = false;
         SecretArea.enabled = false;
+        LevelInfo2.enabled = false;
+        LevelInfo1.enabled = true;
     }
 
     // Update is called once per frame
@@ -39,7 +43,11 @@ public class UIManager : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "GameLevel")
         {
-            LevelUI.enabled = false;
+            Instructions.enabled = false;
+            WelcomeText.enabled = true;
+            GameStarted = false;
+            SecretArea.enabled = false;
+            LevelInfo1.enabled = true;
         }
         if (SceneManager.GetActiveScene().name == "SecretArea")
         {
@@ -48,6 +56,16 @@ public class UIManager : MonoBehaviour
             Instructions.enabled = false;
             Invoke("SecretZone", 0.4f);
         }
+        if (SceneManager.GetActiveScene().name == "GameLevel2")
+        {
+            Instructions.enabled = false;
+            WelcomeText.enabled = false;
+            GameStarted = false;
+            SecretArea.enabled = false;
+            LevelInfo1.enabled = true;
+            LevelInfo2.enabled = false;
+        }
+
     }
     void SetFalse()
     {
@@ -57,5 +75,6 @@ public class UIManager : MonoBehaviour
     {
         SecretArea.enabled = false;
     }
+
 
 }
