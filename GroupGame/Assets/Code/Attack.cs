@@ -6,6 +6,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public Transform firePoint;
+    public GameObject bulletPrefab;
 
     void Update()
     {
@@ -18,5 +19,7 @@ public class Attack : MonoBehaviour
     void Shoot ()
     {
         // shooting code
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
     }
 }

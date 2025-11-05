@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
 
         while (slidertime < 2)
         {
-            Debug.Log(Time.deltaTime);
+            //Debug.Log(Time.deltaTime);
             slidertime += Time.deltaTime;
             timer.value = slidertime;
             yield return null;
