@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public bool isAttacking = false;
     public int maxHealth = 100;
     int currentHealth;
-    public float numOfEnemyKilled = 0f;
+    public int score = 0;
 
     public float attackCooldown = 1.5f;
     public int attackDamage = 20;
@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+
     }
 
     void Update()
@@ -63,6 +64,8 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            score++;
+            Debug.Log(score);
         }
     }
 
@@ -70,7 +73,5 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy Died");
         GameObject.Find("Enemy").SetActive(false);
-        numOfEnemyKilled++;
-        Debug.Log(numOfEnemyKilled.ToString());
     }
 }

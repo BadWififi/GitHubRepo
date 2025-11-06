@@ -4235,8 +4235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeadEnemies: 0
-  LevelInfo2: {fileID: 0}
-  LevelInfo1: {fileID: 0}
+  LevelInfo2: {fileID: 563236330}
+  LevelInfo1: {fileID: 537178340}
 --- !u!4 &1206961106
 Transform:
   m_ObjectHideFlags: 0
