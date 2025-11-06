@@ -26,18 +26,29 @@ public class LevelSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene activeScene = SceneManager.GetActiveScene();
 
         if (GameObject.Find("Enemy") != null)
         {
             GameObject Enemy = GameObject.Find("Enemy");
             Enemy enemyScript = Enemy.GetComponent<Enemy>();
         }
-        else
+        if (activeScene.name == "InfiniteLevel" && GameObject.Find("Enemy") == null)
+        {
+            return;
+        }
+        if (GameObject.Find("Enemy") == null && activeScene.name == "GameLevel")
         {
             Debug.Log("Continue to next level");
             SceneManager.LoadScene("GameLevel2");
             LevelInfo2.enabled= true;
             LevelInfo1.enabled= false;
+        }
+        if (GameObject.Find("Enemy") == null && activeScene.name == "GameLevel2")
+        {
+            SceneManager.LoadScene("InfiniteLevel");
+            LevelInfo1.enabled = false;
+            LevelInfo2.enabled = false;
         }
 
     }

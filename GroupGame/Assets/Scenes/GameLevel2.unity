@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 40.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 40.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4237,6 +4237,8 @@ MonoBehaviour:
   DeadEnemies: 0
   LevelInfo2: {fileID: 563236330}
   LevelInfo1: {fileID: 537178340}
+  EnemiesKilled: {fileID: 0}
+  killCount: 0
 --- !u!4 &1206961106
 Transform:
   m_ObjectHideFlags: 0
@@ -8192,6 +8194,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.677
       objectReference: {fileID: 0}
+    - target: {fileID: 3699815631339090945, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+      propertyPath: Shop
+      value: 
+      objectReference: {fileID: 784414362}
     - target: {fileID: 3699815631339090945, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
       propertyPath: bulletPrefab
       value: 

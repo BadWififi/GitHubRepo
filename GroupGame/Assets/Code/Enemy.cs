@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -22,7 +23,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-
     }
 
     void Update()
@@ -71,7 +71,16 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        Scene activeScene = SceneManager.GetActiveScene();
         Debug.Log("Enemy Died");
-        GameObject.Find("Enemy").SetActive(false);
+        if (activeScene.name == "InfiniteLevel")
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            GameObject.Find("Enemy").SetActive(false);
+        }
+        
     }
 }
