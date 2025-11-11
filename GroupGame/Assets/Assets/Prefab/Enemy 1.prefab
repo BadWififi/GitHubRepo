@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6578431949983114894}
   m_Layer: 9
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   playerLayers:
     serializedVersion: 2
     m_Bits: 0
+  spriteRenderer: {fileID: 7051386935471832072}
+  Damaged: {fileID: -5177388603050735206, guid: 781c8d5618c12134fa657b90aabdabf2, type: 3}
 --- !u!114 &6662529067094895065
 MonoBehaviour:
   m_ObjectHideFlags: 0

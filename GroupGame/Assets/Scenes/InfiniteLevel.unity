@@ -2767,9 +2767,9 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 4628896345671127838, guid: 0af94ac47f99e614bb33490ce9b0bf8f, type: 3}
   minEnemiesSpawned: 1
   maxEnemiesSpawned: 2
-  minSpawnInterval: 5
-  maxSpawnInterval: 10
-  spawnRadius: 1
+  minSpawnInterval: 4
+  maxSpawnInterval: 8
+  spawnRadius: 2
 --- !u!4 &815606566
 Transform:
   m_ObjectHideFlags: 0
@@ -6553,8 +6553,9 @@ MonoBehaviour:
   Instructions: {fileID: 449709079}
   WelcomeText: {fileID: 1630243849}
   SecretArea: {fileID: 610678021}
-  LevelInfo1: {fileID: 0}
-  LevelInfo2: {fileID: 0}
+  LevelInfo1: {fileID: 537178340}
+  LevelInfo2: {fileID: 1402029770}
+  Score: {fileID: 311048261}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
 --- !u!114 &1844552148

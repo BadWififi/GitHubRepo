@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -8,13 +9,26 @@ public class EnemySpawn : MonoBehaviour
     public GameObject EnemyPrefab;
     public int minEnemiesSpawned = 1;
     public int maxEnemiesSpawned = 2;
-    public float minSpawnInterval = 8f;
-    public float maxSpawnInterval = 10f;
-    public float spawnRadius = 2f;
+    public float minSpawnInterval = 5f;
+    public float maxSpawnInterval = 8f;
+    public float spawnRadius = 3f;
 
+    Enemy enemy;
+    int score;
     public void Start()
     {
         StartCoroutine(SpawnEnemies());
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
+
+    }
+    public void Update()
+    {
+        score = enemy.score;
+        if (score > 10 && score < 12)
+        {
+            minEnemiesSpawned++;
+            maxEnemiesSpawned++;
+        }
     }
 
     public IEnumerator SpawnEnemies()
@@ -31,6 +45,7 @@ public class EnemySpawn : MonoBehaviour
 
                 Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
             }
+
         }
     }
 
