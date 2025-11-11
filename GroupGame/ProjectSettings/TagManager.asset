@@ -8,6 +8,8 @@ TagManager:
   - Checkpoint
   - SecretCheckpoint
   - Shop
+  - Bullet
+  - LevelSystem
   layers:
   - Default
   - TransparentFX

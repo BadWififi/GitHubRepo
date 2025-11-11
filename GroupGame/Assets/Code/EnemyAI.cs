@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()

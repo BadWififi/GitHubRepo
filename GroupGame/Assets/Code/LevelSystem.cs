@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour
 {
     public float DeadEnemies;
     [SerializeField] TextMeshProUGUI LevelInfo2;
     [SerializeField] TextMeshProUGUI LevelInfo1;
+    public TextMeshProUGUI EnemiesKilled;
+    public int killCount;
+
     // Start is called before the first frame update
     
     void Start()
@@ -21,21 +26,36 @@ public class LevelSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene activeScene = SceneManager.GetActiveScene();
 
         if (GameObject.Find("Enemy") != null)
         {
             GameObject Enemy = GameObject.Find("Enemy");
             Enemy enemyScript = Enemy.GetComponent<Enemy>();
-            DeadEnemies = enemyScript.numOfEnemyKilled;
         }
-        else
+        if (activeScene.name == "InfiniteLevel" && GameObject.Find("Enemy") == null)
+        {
+            return;
+        }
+        if (GameObject.Find("Enemy") == null && activeScene.name == "GameLevel")
         {
             Debug.Log("Continue to next level");
             SceneManager.LoadScene("GameLevel2");
             LevelInfo2.enabled= true;
             LevelInfo1.enabled= false;
         }
+        if (GameObject.Find("Enemy") == null && activeScene.name == "GameLevel2")
+        {
+            SceneManager.LoadScene("InfiniteLevel");
+            LevelInfo1.enabled = false;
+            LevelInfo2.enabled = false;
+        }
 
-        
+    }
+
+    public void increaseScore()
+    {
+        killCount++;
+        EnemiesKilled.text = killCount.ToString();
     }
 }
