@@ -6553,8 +6553,9 @@ MonoBehaviour:
   Instructions: {fileID: 449709079}
   WelcomeText: {fileID: 1630243849}
   SecretArea: {fileID: 610678021}
-  LevelInfo1: {fileID: 0}
-  LevelInfo2: {fileID: 0}
+  LevelInfo1: {fileID: 537178340}
+  LevelInfo2: {fileID: 1402029770}
+  Score: {fileID: 311048261}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
 --- !u!114 &1844552148
