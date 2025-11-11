@@ -2372,6 +2372,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84395660882dd724baef58dfd44f59e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &667791498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7971425484635486799, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+  m_PrefabInstance: {fileID: 4817375498611194138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667791493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450a03c63e080fa4cbf3bc90c8586081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &667791505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5055,6 +5066,7 @@ MonoBehaviour:
   Shopifi: {fileID: 784414362}
   slidertime: 0
   timer: {fileID: 1946903487}
+  Player: {fileID: 667791498}
 --- !u!114 &1352954646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6561,6 +6573,7 @@ MonoBehaviour:
   SecretArea: {fileID: 610678021}
   LevelInfo1: {fileID: 0}
   LevelInfo2: {fileID: 0}
+  Score: {fileID: 0}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
 --- !u!114 &1844552148
