@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     public bool GameStarted = false;
 
     Enemy enemy;
-    int score;
+    public int score;
     // Start is called before the first frame update
 
     void Start()
@@ -54,6 +54,7 @@ public class UIManager : MonoBehaviour
             GameStarted = false;
             SecretArea.enabled = false;
             LevelInfo1.enabled = true;
+            Score.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "SecretArea")
         {
@@ -61,6 +62,7 @@ public class UIManager : MonoBehaviour
             WelcomeText.enabled = false;
             Instructions.enabled = false;
             Invoke("SecretZone", 0.4f);
+            Score.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "GameLevel2")
         {
@@ -70,6 +72,7 @@ public class UIManager : MonoBehaviour
             SecretArea.enabled = false;
             LevelInfo1.enabled = true;
             LevelInfo2.enabled = false;
+            Score.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "InfiniteLevel")
         {
@@ -80,7 +83,7 @@ public class UIManager : MonoBehaviour
             LevelInfo1.enabled = false;
             LevelInfo2.enabled = true;
             Score.enabled = true;
-            Score.text = "" + score;
+            Score.text = "1" + score;
         }
 
     }

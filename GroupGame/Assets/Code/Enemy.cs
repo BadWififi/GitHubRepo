@@ -77,14 +77,15 @@ public class Enemy : MonoBehaviour
     {
         Scene activeScene = SceneManager.GetActiveScene();
         Debug.Log("Enemy Died");
-        if (activeScene.name == "InfiniteLevel")
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            GameObject.Find("Enemy").SetActive(false);
-        }
+        Destroy(gameObject);
+        //if (activeScene.name == "InfiniteLevel")
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    GameObject.Find("Enemy").SetActive(false);
+        //}
         
     }
     void ChangeSprite()
