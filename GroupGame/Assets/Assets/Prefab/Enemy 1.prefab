@@ -112,6 +112,8 @@ MonoBehaviour:
   playerLayers:
     serializedVersion: 2
     m_Bits: 0
+  spriteRenderer: {fileID: 7051386935471832072}
+  Damaged: {fileID: -5177388603050735206, guid: 781c8d5618c12134fa657b90aabdabf2, type: 3}
 --- !u!114 &6662529067094895065
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,10 +19,13 @@ public class Enemy : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask playerLayers;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite Damaged;
 
     void Start()
     {
         currentHealth = maxHealth;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -60,6 +63,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        ChangeSprite();
 
         if (currentHealth <= 0)
         {
@@ -83,4 +87,10 @@ public class Enemy : MonoBehaviour
         }
         
     }
+    void ChangeSprite()
+    {
+        spriteRenderer.sprite = Damaged;
+    }
+
+
 }

@@ -8,9 +8,9 @@ public class EnemySpawn : MonoBehaviour
     public GameObject EnemyPrefab;
     public int minEnemiesSpawned = 1;
     public int maxEnemiesSpawned = 2;
-    public float minSpawnInterval = 8f;
-    public float maxSpawnInterval = 10f;
-    public float spawnRadius = 2f;
+    public float minSpawnInterval = 5f;
+    public float maxSpawnInterval = 8f;
+    public float spawnRadius = 3f;
 
     public void Start()
     {
