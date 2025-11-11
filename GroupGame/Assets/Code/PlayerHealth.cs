@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -34,5 +35,12 @@ public class PlayerHealth : MonoBehaviour
 
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+    }
+
+    public void AddMaxHealth(int HealthIncrease)
+    {
+        maxHealth += HealthIncrease;
+        healthbar.SetMaxHealth(maxHealth);
+        
     }
 }
