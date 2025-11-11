@@ -8,4 +8,6 @@ public class Upgrades : ScriptableObject
 {
     public string Upgrading;
     public int pricing;
+
+    public int BonusValue;
 }

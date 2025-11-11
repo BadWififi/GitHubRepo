@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject Shopifi;
     public float slidertime = 0;
     public Slider timer;
-    
+    public PlayerHealth Player;
     
     // Start is called before the first frame update
     void Start()
@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
         {
             Bread -= upgrades.pricing;
             MoneyText.text = $"GEO {Bread}";
+            Player.AddMaxHealth(upgrades.BonusValue);
         }
     }
 
