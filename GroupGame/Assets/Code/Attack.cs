@@ -7,19 +7,26 @@ public class Attack : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject Shop;
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Shop.activeSelf == false)
         {
-            Shoot();
-            Debug.Log("You have shot a bullet");
+            if (Input.GetKeyDown("space"))
+            {
+                Shoot();
+                Debug.Log("You have shot a bullet");
+            }
         }
     }
     void Shoot ()
     {
         // shooting code
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if (GameObject.FindGameObjectWithTag("Bullet") == null)
+        {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
 
     }
 }
