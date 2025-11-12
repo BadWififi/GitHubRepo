@@ -6709,9 +6709,6 @@ MonoBehaviour:
   LevelInfo1: {fileID: 537178340}
   LevelInfo2: {fileID: 563236330}
   Score: {fileID: 195658773}
-  LevelInfo1: {fileID: 0}
-  LevelInfo2: {fileID: 0}
-  Score: {fileID: 0}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
   score: 0
@@ -8864,6 +8861,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5246678295425317185, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
+      propertyPath: Normal
+      value: 
+      objectReference: {fileID: -5177388603050735206, guid: 9c1a932f95a36884db218340c722ee29, type: 3}
     - target: {fileID: 5246678295425317185, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
       propertyPath: Damaged
       value: 

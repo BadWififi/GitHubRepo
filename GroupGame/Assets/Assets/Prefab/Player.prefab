@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Bits: 8
   Checkpoint:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &669724058354081960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  healthbar: {fileID: 0}
 --- !u!114 &4511130304888789319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,3 +335,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2611511325343790901}
   bulletPrefab: {fileID: 0}
+  Shop: {fileID: 0}

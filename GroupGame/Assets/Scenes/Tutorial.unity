@@ -4454,6 +4454,7 @@ MonoBehaviour:
   Shopifi: {fileID: 136548727}
   slidertime: 0
   timer: {fileID: 1698713783}
+  Player: {fileID: 0}
 --- !u!114 &1125680629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6951,8 +6952,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
