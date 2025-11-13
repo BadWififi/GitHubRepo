@@ -9,5 +9,7 @@ public class Upgrades : ScriptableObject
     public string Upgrading;
     public int pricing;
 
-    public int BonusValue;
+    public int HealthValue;
+    public int DamageValue;
+    public int MoneyValue;
 }

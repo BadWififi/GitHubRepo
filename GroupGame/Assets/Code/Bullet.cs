@@ -22,4 +22,9 @@ public class Bullet : MonoBehaviour
         Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }
+
+    public void DoubleDamage(int newDamage)
+    {
+        damage *= newDamage;
+    }
 }

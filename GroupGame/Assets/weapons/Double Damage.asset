@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Upgrading: 
   pricing: 1500
+  HealthValue: 0
+  DamageValue: 2
+  MoneyValue: 1

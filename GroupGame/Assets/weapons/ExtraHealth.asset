@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Upgrading: 
   pricing: 200
-  BonusValue: 10
+  HealthValue: 10
+  DamageValue: 1
+  MoneyValue: 1
