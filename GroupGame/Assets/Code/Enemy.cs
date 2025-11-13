@@ -21,11 +21,13 @@ public class Enemy : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite Damaged;
+    public Sprite Normal;
 
     void Start()
     {
         currentHealth = maxHealth;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        score = 0;
     }
 
     void Update()
@@ -36,6 +38,7 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
+        score = score;
     }
 
    
@@ -63,12 +66,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        ChangeSprite();
-
+        StartCoroutine(DamageIndicator());
         if (currentHealth <= 0)
         {
             Die();
-            score++;
             Debug.Log(score);
         }
     }
@@ -77,20 +78,26 @@ public class Enemy : MonoBehaviour
     {
         Scene activeScene = SceneManager.GetActiveScene();
         Debug.Log("Enemy Died");
-        if (activeScene.name == "InfiniteLevel")
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            GameObject.Find("Enemy").SetActive(false);
-        }
+        Destroy(gameObject);
+        score++;
+        Debug.Log(score);
+        //if (activeScene.name == "InfiniteLevel")
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    GameObject.Find("Enemy").SetActive(false);
+        //}
         
     }
-    void ChangeSprite()
+
+    public IEnumerator DamageIndicator()
     {
         spriteRenderer.sprite = Damaged;
+        Debug.Log("Enemy had taken damage");
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.sprite = Normal;
     }
-
 
 }
