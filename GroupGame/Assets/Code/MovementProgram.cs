@@ -9,14 +9,11 @@ public class MovementProgram : MonoBehaviour
 {
     public float horizontal;
     public float speed = 8f;
-    public float jumpingPower = 0f;
     public bool isFacingRight = true;
     Vector2 movement = Vector2.zero;
     public Vector2 movementDirection;
 
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask Checkpoint;
 
     // Update is called once per frame
@@ -33,16 +30,6 @@ public class MovementProgram : MonoBehaviour
             StartCoroutine(ChangeAfter4SecondsCoroutine());
         }
 
-
-        //if (Input.GetButtonDown("Jump") && IsGrounded())
-        //{
-        //    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        //}
-
-        //if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        //{
-        //    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        //}
         GameObject ShopUI = GameObject.FindWithTag("Shop");
         if (ShopUI != null)
         {
@@ -59,11 +46,6 @@ public class MovementProgram : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    //private bool IsGrounded()
-    //{
-    //    return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    //}
-
 
     private void Flip()
     {
@@ -71,9 +53,6 @@ public class MovementProgram : MonoBehaviour
         {
             isFacingRight = !isFacingRight;
             transform.Rotate(0f, 180f, 0f);
-            //Vector3 localScale = transform.localScale;
-            //localScale.x *= -1f;
-            //transform.localScale = localScale;
         }
     }
     void OnCollisionEnter(Collision collision)

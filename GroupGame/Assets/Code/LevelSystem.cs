@@ -7,10 +7,8 @@ using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour
 {
-    public float DeadEnemies;
     [SerializeField] TextMeshProUGUI LevelInfo2;
     [SerializeField] TextMeshProUGUI LevelInfo1;
-    public int killCount;
 
     // Start is called before the first frame update
     
