@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Double Damage
   m_EditorClassIdentifier: 
   Upgrading: 
-  pricing: 1500
+  pricing: 500
   HealthValue: 0
   DamageValue: 2
   MoneyValue: 1
