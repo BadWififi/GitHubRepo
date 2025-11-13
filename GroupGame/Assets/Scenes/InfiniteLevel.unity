@@ -2544,18 +2544,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8446945317133418076, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
   m_PrefabInstance: {fileID: 4817375498611194138}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &667791494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667791493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84395660882dd724baef58dfd44f59e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &667791498 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7971425484635486799, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
@@ -4712,7 +4700,6 @@ MonoBehaviour:
   DeadEnemies: 0
   LevelInfo2: {fileID: 1402029770}
   LevelInfo1: {fileID: 537178340}
-  EnemiesKilled: {fileID: 311048261}
   killCount: 0
 --- !u!4 &1206961106
 Transform:
@@ -9026,10 +9013,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8446945317133418076, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 667791494}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

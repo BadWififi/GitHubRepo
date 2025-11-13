@@ -23,7 +23,7 @@ public class ScoreCounter : MonoBehaviour
     {
         highscore = PlayerPrefs.GetInt("highscore", 0);
         scoreText.text = score.ToString();
-        highscoreText.text = highscore.ToString();
+        highscoreText.text = "Highscore: " + highscore.ToString();
     }
 
     public void AddPoint()
