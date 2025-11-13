@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI LevelInfo1;
     [SerializeField] TextMeshProUGUI LevelInfo2;
     [SerializeField] TextMeshProUGUI Score;
+    [SerializeField] TextMeshProUGUI highscore;
     public Canvas LevelUI;
 
     public bool GameStarted = false;
@@ -30,6 +31,7 @@ public class UIManager : MonoBehaviour
         LevelInfo2.enabled = false;
         LevelInfo1.enabled = true;
         Score.enabled = false;
+        highscore.enabled = false;
     }
 
     // Update is called once per frame
@@ -53,6 +55,7 @@ public class UIManager : MonoBehaviour
             SecretArea.enabled = false;
             LevelInfo1.enabled = true;
             Score.enabled = false;
+            highscore.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "SecretArea")
         {
@@ -61,6 +64,7 @@ public class UIManager : MonoBehaviour
             Instructions.enabled = false;
             Invoke("SecretZone", 0.4f);
             Score.enabled = false;
+            highscore.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "GameLevel2")
         {
@@ -71,11 +75,10 @@ public class UIManager : MonoBehaviour
             LevelInfo1.enabled = true;
             LevelInfo2.enabled = false;
             Score.enabled = false;
+            highscore.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "InfiniteLevel")
         {
-            score = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().score;
-            Debug.Log(score);
             Instructions.enabled = false;
             WelcomeText.enabled = false;
             GameStarted = false;
@@ -83,7 +86,7 @@ public class UIManager : MonoBehaviour
             LevelInfo1.enabled = false;
             LevelInfo2.enabled = true;
             Score.enabled = true;
-            Score.text = "1" + score;
+            highscore.enabled = true;
         }
 
     }

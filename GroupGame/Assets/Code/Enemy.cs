@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,6 @@ public class Enemy : MonoBehaviour
     public bool isAttacking = false;
     public int maxHealth = 100;
     int currentHealth;
-    public int score = 0;
 
     public float attackCooldown = 1.5f;
     public int attackDamage = 20;
@@ -23,11 +23,14 @@ public class Enemy : MonoBehaviour
     public Sprite Damaged;
     public Sprite Normal;
 
+    public GameManager money;
+    
+
     void Start()
     {
         currentHealth = maxHealth;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        score = 0;
+
     }
 
     void Update()
@@ -38,7 +41,7 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
-        score = score;
+        
     }
 
    
@@ -70,7 +73,6 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
-            Debug.Log(score);
         }
     }
 
@@ -78,9 +80,19 @@ public class Enemy : MonoBehaviour
     {
         Scene activeScene = SceneManager.GetActiveScene();
         Debug.Log("Enemy Died");
-        Destroy(gameObject);
-        score++;
-        Debug.Log(score);
+        if (activeScene.name == "InfiniteLevel")
+        {
+            ScoreCounter.instance.AddPoint();
+            Destroy(gameObject);
+            money.Bread += 5;
+            Debug.Log(money.Bread);
+        }
+        else
+        {
+            Destroy(gameObject);
+            money.Bread += 5;
+            Debug.Log(money.Bread);
+        }
         //if (activeScene.name == "InfiniteLevel")
         //{
         //    Destroy(gameObject);

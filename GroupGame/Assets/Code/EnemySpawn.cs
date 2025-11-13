@@ -23,7 +23,6 @@ public class EnemySpawn : MonoBehaviour
     }
     public void Update()
     {
-        score = enemy.score;
         if (score > 10 && score < 12)
         {
             minEnemiesSpawned++;
