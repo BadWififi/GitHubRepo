@@ -118,6 +118,8 @@ public class GameManager : MonoBehaviour
             Bread -= upgrades.pricing;
             MoneyText.text = $"GEO {Bread}";
             Player.AddMaxHealth(upgrades.HealthValue);
+            bullet.DoubleDamage(upgrades.DamageValue);
+
         }
     }
 

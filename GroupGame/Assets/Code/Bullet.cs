@@ -26,5 +26,6 @@ public class Bullet : MonoBehaviour
     public void DoubleDamage(int newDamage)
     {
         damage *= newDamage;
+        Debug.Log("damage is"+damage);
     }
 }

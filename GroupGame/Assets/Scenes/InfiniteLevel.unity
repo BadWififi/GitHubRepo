@@ -1258,7 +1258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 445.797}
+  m_AnchoredPosition: {x: -71, y: 442}
   m_SizeDelta: {x: 200.142, y: 54.407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508715964
@@ -2470,6 +2470,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84395660882dd724baef58dfd44f59e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &667791498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7971425484635486799, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+  m_PrefabInstance: {fileID: 4817375498611194138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667791493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450a03c63e080fa4cbf3bc90c8586081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &676204975
@@ -5272,12 +5283,12 @@ MonoBehaviour:
   WeaponsShop: {fileID: 190055242}
   AbilityShop: {fileID: 619545338}
   UpgradeShop: {fileID: 1263688524}
-  Bread: 1150
+  Bread: 99999999
   Shopifi: {fileID: 784414362}
   slidertime: 0
   timer: {fileID: 1946903487}
-  Player: {fileID: 0}
-  bullet: {fileID: 0}
+  Player: {fileID: 667791498}
+  bullet: {fileID: 2775975020240116338, guid: d4239b1b3d2fb404489347dd382f15f8, type: 3}
 --- !u!114 &1352954646
 MonoBehaviour:
   m_ObjectHideFlags: 0
