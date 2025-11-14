@@ -3167,7 +3167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104, y: -20.960022}
+  m_AnchoredPosition: {x: 104, y: -20.95996}
   m_SizeDelta: {x: 143.70972, y: 41.925293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &784414362
@@ -4740,10 +4740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5d3603b50e33447aeadf5acdf9c91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeadEnemies: 0
   LevelInfo2: {fileID: 563236330}
   LevelInfo1: {fileID: 537178340}
-  killCount: 0
 --- !u!4 &1206961106
 Transform:
   m_ObjectHideFlags: 0
@@ -5263,6 +5261,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320229424}
   m_CullTransparentMesh: 1
+--- !u!1 &1346209851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346209853}
+  - component: {fileID: 1346209852}
+  m_Layer: 0
+  m_Name: ScoreCounter
+  m_TagString: ScoreCounter
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1346209852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346209851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf4626676b28914f9ba3f90f3d6d3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 195658773}
+  highscoreText: {fileID: 489888105}
+  score: 0
+  highscore: 0
+  money: 0
+--- !u!4 &1346209853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346209851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1535.1188, y: 1044.364, z: -10.07232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346653921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,7 +5485,8 @@ MonoBehaviour:
   slidertime: 0
   timer: {fileID: 1946903487}
   Player: {fileID: 667791498}
-  bullet: {fileID: 0}
+  bullet: {fileID: 2775975020240116338, guid: d4239b1b3d2fb404489347dd382f15f8, type: 3}
+  money: {fileID: 1346209852}
 --- !u!114 &1352954646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5496,7 +5544,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -6950,7 +6998,6 @@ MonoBehaviour:
   highscore: {fileID: 489888105}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
-  score: 0
 --- !u!114 &1844552148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8959,6 +9006,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2810904203693791263, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3434419046324251816, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
       propertyPath: m_Mass
       value: 10
@@ -9023,14 +9074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4daf40c4cad444d89e865704501bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
-  enemies: []
-  minTimeBetweenSpawns: 0
-  maxTimeBetweenSpawns: 0
-  canSpawn: 0
-  spawnTime: 0
-  enemiesInRoom: 0
-  spawnerDone: 0
 --- !u!4 &5509139548692659676 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1252254971449810883, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
@@ -9056,3 +9099,4 @@ SceneRoots:
   - {fileID: 5509139548692659673}
   - {fileID: 1206961106}
   - {fileID: 352509282}
+  - {fileID: 1346209853}

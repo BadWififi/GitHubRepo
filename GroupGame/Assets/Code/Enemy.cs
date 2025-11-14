@@ -22,14 +22,12 @@ public class Enemy : MonoBehaviour
     public Sprite Damaged;
     public Sprite Normal;
 
-    public GameManager money;
     
 
     void Start()
     {
         currentHealth = maxHealth;
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
     }
 
     void Update()
@@ -80,14 +78,12 @@ public class Enemy : MonoBehaviour
         {
             ScoreCounter.instance.AddPoint();
             Destroy(gameObject);
-            money.Bread += 5;
-            Debug.Log(money.Bread);
+            ScoreCounter.instance.AddMoney();
         }
         else
         {
             Destroy(gameObject);
-            money.Bread += 5;
-            Debug.Log(money.Bread);
+            ScoreCounter.instance.AddMoney();
         }
         
     }

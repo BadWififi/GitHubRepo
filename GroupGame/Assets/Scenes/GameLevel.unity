@@ -2367,6 +2367,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8446945317133418076, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
   m_PrefabInstance: {fileID: 4817375498611194138}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &667791496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7971425484635486799, guid: 3ce89d71ac19ecd44a6c1a8a9c8c289a, type: 3}
+  m_PrefabInstance: {fileID: 4817375498611194138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667791493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450a03c63e080fa4cbf3bc90c8586081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &676204975
 GameObject:
   m_ObjectHideFlags: 0
@@ -4495,10 +4506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5d3603b50e33447aeadf5acdf9c91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeadEnemies: 0
   LevelInfo2: {fileID: 634896577}
   LevelInfo1: {fileID: 1999157509}
-  killCount: 0
 --- !u!4 &1177754298
 Transform:
   m_ObjectHideFlags: 0
@@ -5188,12 +5197,13 @@ MonoBehaviour:
   WeaponsShop: {fileID: 190055242}
   AbilityShop: {fileID: 619545338}
   UpgradeShop: {fileID: 1263688524}
-  Bread: 1150
+  Bread: 150
   Shopifi: {fileID: 784414362}
   slidertime: 0
   timer: {fileID: 1946903487}
-  Player: {fileID: 0}
-  bullet: {fileID: 0}
+  Player: {fileID: 667791496}
+  bullet: {fileID: 2775975020240116338, guid: d4239b1b3d2fb404489347dd382f15f8, type: 3}
+  enemy: {fileID: 8686152239861485103, guid: 0af94ac47f99e614bb33490ce9b0bf8f, type: 3}
 --- !u!114 &1352954646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5251,7 +5261,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -6872,7 +6882,6 @@ MonoBehaviour:
   highscore: {fileID: 1900299399}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
-  score: 0
 --- !u!114 &1844552148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9098,6 +9107,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2810904203693791263, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3434419046324251816, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
       propertyPath: m_Mass
       value: 10
@@ -9132,8 +9145,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5246678295425317185, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
       propertyPath: money
-      value: 
-      objectReference: {fileID: 1352954645}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5246678295425317185, guid: e62449294f03ad74e83b77573ccc1d1b, type: 3}
       propertyPath: Normal
       value: 

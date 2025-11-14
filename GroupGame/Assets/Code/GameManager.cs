@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Slider timer;
     public PlayerHealth Player;
     public Bullet bullet;
+    public ScoreCounter money;
     
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,15 @@ public class GameManager : MonoBehaviour
         MoneyText.text = $"GEO {Bread}";
         WeaponsShop.SetActive(false);
         Shopifi.SetActive(false);
+        money = GameObject.FindGameObjectWithTag("ScoreCounter").GetComponent<ScoreCounter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Bread = money.money;
+        MoneyText.text = $"GEO {Bread}";
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Shopifi.activeSelf)

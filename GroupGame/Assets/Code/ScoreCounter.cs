@@ -14,16 +14,21 @@ public class ScoreCounter : MonoBehaviour
     public int score = 0;
     public int highscore = 0;
 
+
+    public int money = 150;
+
     private void Awake()
     {
         instance = this;
+        ScoreCounter.DontDestroyOnLoad(gameObject);
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         highscore = PlayerPrefs.GetInt("highscore", 0);
         scoreText.text = score.ToString();
         highscoreText.text = "Highscore: " + highscore.ToString();
+        Enemy enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
     }
 
     public void AddPoint()
@@ -34,5 +39,10 @@ public class ScoreCounter : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", score);
         }
+    }
+
+    public void AddMoney()
+    {
+        money += 5;
     }
 }
