@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject WeaponsShop;
     public GameObject AbilityShop;
     public GameObject UpgradeShop;
-    public int Bread = 31;
+    public int Bread = 150;
     public GameObject Shopifi;
     public float slidertime = 0;
     public Slider timer;
