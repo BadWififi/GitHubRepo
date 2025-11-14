@@ -2835,7 +2835,7 @@ GameObject:
   - component: {fileID: 694718692}
   m_Layer: 0
   m_Name: ScoreCounter
-  m_TagString: Untagged
+  m_TagString: ScoreCounter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3050,7 +3050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 815606566}
-  - component: {fileID: 815606565}
+  - component: {fileID: 815606567}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -3058,24 +3058,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &815606565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815606564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081181354eb21f441aa1d39aae5973eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 4628896345671127838, guid: 0af94ac47f99e614bb33490ce9b0bf8f, type: 3}
-  minEnemiesSpawned: 1
-  maxEnemiesSpawned: 2
-  minSpawnInterval: 4
-  maxSpawnInterval: 8
-  spawnRadius: 2
 --- !u!4 &815606566
 Transform:
   m_ObjectHideFlags: 0
@@ -3091,6 +3073,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815606567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815606564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081181354eb21f441aa1d39aae5973eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefab: {fileID: 4628896345671127838, guid: 0af94ac47f99e614bb33490ce9b0bf8f, type: 3}
+  minEnemiesSpawned: 1
+  maxEnemiesSpawned: 2
+  minSpawnInterval: 5
+  maxSpawnInterval: 8
+  spawnRadius: 3
+  executed: 0
+  scoreManager: {fileID: 694718692}
 --- !u!1 &872471769
 GameObject:
   m_ObjectHideFlags: 0
@@ -7108,7 +7110,6 @@ MonoBehaviour:
   highscore: {fileID: 0}
   LevelUI: {fileID: 1844552150}
   GameStarted: 0
-  score: 0
 --- !u!114 &1844552148
 MonoBehaviour:
   m_ObjectHideFlags: 0

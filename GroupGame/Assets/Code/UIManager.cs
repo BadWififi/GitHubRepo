@@ -17,8 +17,6 @@ public class UIManager : MonoBehaviour
     public Canvas LevelUI;
 
     public bool GameStarted = false;
-
-    public int score;
     // Start is called before the first frame update
 
     void Start()

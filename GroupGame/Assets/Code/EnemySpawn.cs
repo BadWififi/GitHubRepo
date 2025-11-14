@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -12,20 +13,34 @@ public class EnemySpawn : MonoBehaviour
     public float maxSpawnInterval = 8f;
     public float spawnRadius = 3f;
 
+    public bool executed = false;
     Enemy enemy;
-    int score;
+    public ScoreCounter scoreManager;
     public void Start()
     {
         StartCoroutine(SpawnEnemies());
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
+        scoreManager = scoreManager.GetComponent<ScoreCounter>();
+        int score = scoreManager.score;
+        executed = false;
 
     }
     public void Update()
     {
-        if (score > 10 && score < 12)
+        int score = scoreManager.score;
+        if (score == 3 && executed == false || score == 15 && executed == false) 
         {
             minEnemiesSpawned++;
             maxEnemiesSpawned++;
+            Debug.Log("min enemies spawned is now: " + minEnemiesSpawned);
+            Debug.Log("max enemies spawned is now: " + maxEnemiesSpawned);
+            executed = true;
+        }
+        if (score == 10 && executed == true || score == 20 && executed == false)
+        {
+            minSpawnInterval--;
+            maxSpawnInterval--;
+            executed = false;
         }
     }
 

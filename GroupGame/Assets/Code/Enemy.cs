@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    private EnemySpawner enemySpawning;
 
     public bool isAttacking = false;
     public int maxHealth = 100;
@@ -48,9 +47,6 @@ public class Enemy : MonoBehaviour
     public IEnumerator Attack()
     {
         isAttacking = true;
-
-        
-        Debug.Log("Enemy attacking!");
 
         yield return new WaitForSeconds(0.2f);
 
@@ -93,21 +89,12 @@ public class Enemy : MonoBehaviour
             money.Bread += 5;
             Debug.Log(money.Bread);
         }
-        //if (activeScene.name == "InfiniteLevel")
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else
-        //{
-        //    GameObject.Find("Enemy").SetActive(false);
-        //}
         
     }
 
     public IEnumerator DamageIndicator()
     {
         spriteRenderer.sprite = Damaged;
-        Debug.Log("Enemy had taken damage");
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.sprite = Normal;
     }
